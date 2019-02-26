@@ -1,0 +1,54 @@
+﻿<Window x:Class="DataBaseWpf.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DataBaseWpf"
+        mc:Ignorable="d"
+        Title="DataTable" Background="LightGray" Height="800" Width="1000">
+    <Grid>
+        <DataGrid x:Name="DataGridXAML" HorizontalAlignment="Left" Height="317" Margin="45,35,0,0" VerticalAlignment="Top" Width="865">
+            <DataGrid.Resources>
+                <Style TargetType="{x:Type DataGridColumnHeader}">
+
+                    <Setter Property="Background" Value="DeepSkyBlue"></Setter>
+                    <Setter Property="FontWeight" Value="SemiBold"></Setter>
+                    <Setter Property="BorderThickness" Value="0,0,1,2"></Setter>
+                    <Setter Property="BorderBrush" Value="Black"></Setter>
+
+                </Style>
+            </DataGrid.Resources>
+            <DataGrid.Columns>
+
+                <DataGridTextColumn Header="HenkilöID" Binding="{Binding HenkiloID}" Width="75"/>
+                <DataGridTextColumn Header="Etunimi" Binding="{Binding Etunimi}" Width="100"/>
+                <DataGridTextColumn Header="Sukunimi" Binding="{Binding Sukunimi}" Width="100"/>
+                <DataGridTextColumn Header="Osoite" Binding="{Binding Osoite}" Width="100"/>
+                <DataGridTextColumn Header="Postinumero" Binding="{Binding Postinumero}" Width="100"/>
+                <DataGridTextColumn Header="Sähköposti" Binding="{Binding Sahkoposti}" Width="150"/>
+                <DataGridTextColumn Header="Puhelinnumero" Binding="{Binding Puhelinnumero}" Width="100"/>
+                <DataGridTextColumn Header="Päivämäärä" Binding="{Binding Paivamaara}" Width="130"/>
+
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <TextBox x:Name="txtHenkiloID" HorizontalAlignment="Left" Height="43" Margin="258,372,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="260"/>
+        <TextBox x:Name="txtEtunimi" HorizontalAlignment="Left" Height="43" Margin="258,420,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="260"/>
+        <TextBox x:Name="txtSukunimi" HorizontalAlignment="Left" Height="43" Margin="258,468,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="260"/>
+        <TextBox x:Name="txtOsoite" HorizontalAlignment="Left" Height="43" Margin="258,516,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="260"/>
+        <TextBox x:Name="txtPostinumero" HorizontalAlignment="Left" Height="43" Margin="258,564,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="260"/>
+        <TextBox x:Name="txtSahkoposti" HorizontalAlignment="Left" Height="43" Margin="258,612,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="260"/>
+        <TextBox x:Name="txtPuhelinnumero" HorizontalAlignment="Left" Height="43" Margin="258,660,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="260"/>
+        <Button x:Name="btnLisaaHenkilo" Content="Lisää Henkilötieto" HorizontalAlignment="Left" Margin="570,484,0,0" VerticalAlignment="Top" Width="171" Height="139" Click="BtnLisaaHenkilo_Click"/>
+        <Button x:Name="btnTyhjennaTiedot" Content="Tyhjennä Tiedot" HorizontalAlignment="Left" Margin="570,646,0,0" VerticalAlignment="Top" Width="171" Height="50" Click="BtnTyhjennaTiedot_Click"/>
+        <TextBox x:Name="txtDate" HorizontalAlignment="Left" Height="26" Margin="258,708,0,0" TextWrapping="Wrap" Text="Date" VerticalAlignment="Top" Width="260"/>
+        <Label x:Name="lblHenkiloID" Content="HenkilöID:" HorizontalAlignment="Left" Margin="179,372,0,0" VerticalAlignment="Top" Width="67" RenderTransformOrigin="0.313,0.5"/>
+        <Label x:Name="lblEtunimi" Content="Etunimi:" HorizontalAlignment="Left" Margin="188,420,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblSukunimi" Content="Sukunimi:" HorizontalAlignment="Left" Margin="179,468,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblOsoite" Content="Osoite:" HorizontalAlignment="Left" Margin="193,516,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblPostinumero" Content="Postinumero:" HorizontalAlignment="Left" Margin="161,564,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblSahkoposti" Content="Sähköposti:" HorizontalAlignment="Left" Margin="169,612,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblPuhelinnumero" Content="Puhelinnumero:" HorizontalAlignment="Left" Margin="153,660,0,0" VerticalAlignment="Top"/>
+
+    </Grid>
+</Window>
